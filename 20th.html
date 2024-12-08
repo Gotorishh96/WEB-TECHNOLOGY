@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Full Name to Short Name</title>
+  <script>
+    function getShortName(fullName) {
+      var words = fullName.split(" ");
+      var firstName = words[0];
+      var lastName = words[words.length - 1];
+      var shortName = firstName + " " + lastName.charAt(0) + ".";
+      return shortName;
+    }
+
+    function displayShortName() {
+      var fullName = document.getElementById("fullName").value;
+      var shortName = getShortName(fullName);
+      document.getElementById("shortName").innerHTML = shortName;
+    }
+  </script>
+</head>
+<body>
+  <h1>Full Name to Short Name</h1>
+  <form>
+    <label for="fullName">Enter Full Name:</label>
+    <input type="text" id="fullName" name="fullName">
+    <button type="button" onclick="displayShortName()">Submit</button>
+  </form>
+  <p>Short Name: <span id="shortName"></span></p>
+</body>
+</html>
