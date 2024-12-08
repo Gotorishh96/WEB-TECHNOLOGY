@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sum of Digits and Count Odd/Even</title>
+  <script>
+    function findSumAndCountDigits() {
+      
+      var number = document.getElementById("numberInput").value;
+
+      
+      var numberString = number.toString();
+
+      
+      var sum = 0;
+      var oddCount = 0;
+      var evenCount = 0;
+
+      // Loop through each digit in the number string
+      for (var i = 0; i < numberString.length; i++) {
+        // Convert the digit back to a number
+        var digit = parseInt(numberString[i]);
+
+        // Add the digit to the sum
+        sum += digit;
+
+        // Check if the digit is odd or even
+        if (digit % 2 === 0) {
+          evenCount++;
+        } else {
+          oddCount++;
+        }
+      }
+
+      // Display the results
+      document.getElementById("sumResult").innerHTML = "Sum of digits: " + sum;
+      document.getElementById("oddResult").innerHTML = "Number of odd digits: " + oddCount;
+      document.getElementById("evenResult").innerHTML = "Number of even digits: " + evenCount;
+    }
+  </script>
+</head>
+<body>
+  <h1>Sum of Digits and Count Odd/Even</h1>
+  <label for="numberInput">Enter a number:</label>
+  <input type="number" id="numberInput">
+  <button onclick="findSumAndCountDigits()">Calculate</button>
+
+  <p id="sumResult"></p>
+  <p id="oddResult"></p>
+  <p id="evenResult"></p>
+</body>
+</html>
