@@ -1,0 +1,28 @@
+<html>
+    <html lang="en">
+    <head>
+      <script language="javascript">
+        {
+            function disp()
+            {
+            var n1,n2,s;
+            n1=myForm.tf1.value;
+            n2=myForm.tf2.value;
+            s=parseInt(n1)+parseInt(n2)
+            window.alert("Sum of two nos="+s);
+            document.write("Sum of two numbers=" +s);
+            }
+        }
+      </script>
+        <title>Document</title>
+    </head>
+    <body>
+        <form name="myForm">
+            Enter 1st no <input type="text" name="tf1">
+            <br>
+            Enter 2nd no <input type="text" name="tf2">
+        <br>
+        <input type="submit" value="ok" onClick="disp()">
+        </form>
+    </body>
+    </html>
